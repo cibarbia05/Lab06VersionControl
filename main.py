@@ -1,14 +1,15 @@
-def encoder(password): # Christian Ibarbia Ruiz
+def encoder(password):  # Christian Ibarbia Ruiz
     return ''.join([str((int(digit) + 3)) for digit in password])
 
-def decoder(password): # Joseph Guzman
+
+def decoder(password):  # Joseph Guzman
     decoded_password = ''
     for i in password:
         decoded_password += str(int(i) - 3)
     return decoded_password
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # main method
     print("Menu\n"
           "-------------\n"
           "1. Encode\n"
@@ -18,7 +19,7 @@ if __name__ == '__main__':
     option = int(input("\nPlease enter an option: "))
     encoded_password = ''
 
-    while option != 3:
+    while option != 3:  # loops while user has not selected 3 as an option
         if option == 1:
             password = input("Please enter your password to encode: ")
             encoded_password = encoder(password)
@@ -34,5 +35,3 @@ if __name__ == '__main__':
               "2. Decode\n"
               "3. Quit\n")
         option = int(input("Please enter an option: "))
-
-
